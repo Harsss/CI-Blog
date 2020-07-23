@@ -28,6 +28,17 @@ $ID=$this->session->userdata('Id');
 
               return $ro->result();
 }
+
+public function AllArticles()
+{
+  $Articles=$this->db->select('*')
+  -> from('artcles AS T1,user AS T2')
+  -> where('T1.UserId=T2.Id')
+  ->get();
+  return $Articles->result();
+
+
+}
 public function AddArticles($array){
 
   $Title= $array['Title'];

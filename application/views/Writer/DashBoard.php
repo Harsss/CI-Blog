@@ -27,8 +27,6 @@ if($msg=$this->session->flashdata('msg')):
 
 
 
-
-
 <?php 
 
  ?>
